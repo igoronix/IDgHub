@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol WelcomeViewInputProtocol: ViewInputProtocol {
-    func ff()
 }
 
 class WelcomePresenter<ViewType: WelcomeViewInputProtocol>: BasePresenter<ViewType> {

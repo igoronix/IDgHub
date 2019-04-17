@@ -14,13 +14,11 @@ extension DependencyManager.UI {
                 Storyboard.welcome.welcomeView()!
                 }.initCompleted { resolver, view in
                     let presenter = resolver.resolve(WelcomePresenter<WelcomeView>.self)!
-//                    view.lifecycleListener = presenter
                     view.presenter = presenter
             }
             
             c.register(WelcomePresenter.self) { resolver in
-                return WelcomePresenter<WelcomeView>(resolver.resolve(WelcomeRouterProtocol.self)!)
-                //sessionManager: resolver.resolve(SessionManager.self)!)
+                WelcomePresenter<WelcomeView>(resolver.resolve(WelcomeRouterProtocol.self)!)
                 }.initCompleted { resolver, presenter in
                     presenter.attach(view: resolver.resolve(WelcomeView.self))
             }

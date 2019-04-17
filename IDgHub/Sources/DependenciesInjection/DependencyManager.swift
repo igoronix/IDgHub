@@ -18,15 +18,6 @@ final class DependencyManager: NSObject {
     struct UI { //swiftlint:disable:this type_name
         fileprivate var assemblies: [Assembly] = [
             WelcomeAssembly()
-            //            MainTabbarAssembly(),
-            //            LoginAssembly(),
-            //            BookingAssembly(),
-            //            HotelAssembly(),
-            //            RoomDetailsAssembly(),
-            //            PaymentAssembly(),
-            //            RewardsAssembly(),
-            //            CardsAssembly(),
-            //            GeneralAssembly()
         ]
     }
 }
@@ -46,12 +37,6 @@ extension DependencyManager {
         func assemble(container c: Container) {
 //            c.register(SessionManager.self) { _ in
 //                return SessionManager()
-//                }.inObjectScope(.container)
-//
-//            c.register(BookingManager.self) { resolver in
-//                let sessionManager = resolver.resolve(SessionManager.self)!
-//
-//                return BookingManager(configuration: .default, sessionManager: sessionManager)
 //                }.inObjectScope(.container)
         }
     }
